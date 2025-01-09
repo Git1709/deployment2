@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Character Viewer</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="script.js"></script>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <script>
+        if (navigator.userAgent.includes("Edg")) {
+            document.body.classList.add("edge-browser");
+        }
+        
+    </script>
+    <script>
+        (async function () {
+            if (navigator.brave && (await navigator.brave.isBrave())) {
+                document.body.classList.add("brave-browser");
+            }
+        })();
+    </script>
+    
+    <section id="backgroundImage" >
+    <div id="characters">
+        <!-- Character list will be dynamically loaded here -->
+    </div>
+    <div id="main">
+        <div id="left">
+            <div id="artifact">
+                <!-- Artifacts will be dynamically loaded here -->
+            </div>
+            <br><br>
+            <div id="roles">
+                <!-- Roles will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <div id="mid">
+            <!-- Main image will be dynamically loaded here -->
+        </div>
+
+        <div id="right">
+            <div id="weapon">
+                <!-- Weapons will be dynamically loaded here -->
+            </div>
+            <br><br>
+            <div id="materials">
+                <!-- Materials will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const charactersDiv = document.getElementById('characters');
+
+        // Add a scroll event listener to support horizontal scrolling with the mouse wheel
+        charactersDiv.addEventListener('wheel', (event) => {
+            event.preventDefault(); // Prevent default vertical scrolling behavior
+            charactersDiv.scrollLeft += event.deltaY; // Scroll horizontally instead
+        });
+
+
+        const backgroundDiv = document.getElementById('backgroundImage');
+
+/* Add a scroll event listener to support horizontal scrolling with the mouse wheel
+backgroundDiv.addEventListener('wheel', (event) => {
+    event.preventDefault(); // Prevent default vertical scrolling behavior
+    backgroundDiv.scrollLeft += event.deltaY; // Scroll horizontally instead
+});*/
+    </script>
+</body>
+</html>
