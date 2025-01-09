@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import multer from "multer";
 import bodyParser from "body-parser";
 import { PORT, mongodburl } from "./config.js";
-import { Character } from "./models/charmodels.js";
+import { Character } from "./models/charModels.js";
 /*----------------------------------------------------------------------------------------------------------------------------------*/
 //for frontend
 // CORS Middleware
