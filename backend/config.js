@@ -1,2 +1,3 @@
-export const PORT =5555;
-export const mongodburl= 'mongodb+srv://root:root@cluster0.ilzae.mongodb.net/genshin?retryWrites=true&w=majority&appName=Cluster0'
+// config.js
+export const PORT = process.env.PORT || 3000;
+export const mongodburl = process.env.MONGODB_URL;
